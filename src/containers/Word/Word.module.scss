@@ -1,0 +1,9 @@
+.word {
+  height: 25%;
+  
+  .wordContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}

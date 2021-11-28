@@ -1,2 +1,2 @@
-export * from "./Category";
-export * from "./Type";
+export * from "./Features";
+export * from "./Word";

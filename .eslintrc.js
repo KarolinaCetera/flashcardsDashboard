@@ -18,13 +18,21 @@ module.exports = {
 		ecmaVersion: 12,
 		sourceType: "module",
 	},
-	plugins: ["react", "@typescript-eslint", "prettier"],
+	settings: {
+		"import/parsers": {
+			"@typescript-eslint/parser": [".ts", ".tsx"],
+		},
+		"import/resolver": {
+			alwaysTryTypes: true,
+			project: "tsconfig.json",
+		},
+	},
+	plugins: ["react", "@typescript-eslint", "prettier", "only-warn"],
 	rules: {
-		"linebreak-style": ["error", "unix"],
-		"react/jsx-props-no-spreading": "off",
-		"react/prop-types": "off",
-		"react/display-name": 0,
+		"@typescript-eslint/no-var-requires": 0,
+		"@typescript-eslint/no-unused-vars": "off",
 		"explicit-module-boundary-types": "off",
+		"linebreak-style": ["error", "unix"],
 		"max-len": [
 			"warn",
 			{
@@ -35,8 +43,10 @@ module.exports = {
 				ignoreComments: true,
 			},
 		],
+		"react/display-name": 0,
+		"react/jsx-props-no-spreading": "off",
+		"react/prop-types": "off",
 		"sort-imports": "off",
-		"@typescript-eslint/no-var-requires": 0,
 		"no-undef": "off",
 	},
 };

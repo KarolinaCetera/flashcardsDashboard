@@ -1,20 +1,21 @@
 import React from "react";
+import { Form } from "react-bootstrap";
+import classes from "./Select.module.scss";
 
 export const Select: React.FC<{
 	label: string;
-	id: string;
 	options: Array<string>;
-}> = ({ label, id, options }) => {
+}> = ({ label, options }) => {
 	return (
 		<div>
-			<label>{label}</label>
-			<select name={id} id={id}>
+			<label className={classes.label}>{label}</label>
+			<Form.Select>
 				{options.map((option) => (
 					<option key={option} value={option}>
 						{option}
 					</option>
 				))}
-			</select>
+			</Form.Select>
 		</div>
 	);
 };
