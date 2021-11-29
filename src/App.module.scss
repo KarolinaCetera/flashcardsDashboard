@@ -1,3 +1,5 @@
+@import "breakpoints";
+
 .form {
   width: 85vw;
   position: absolute;
@@ -5,15 +7,26 @@
   top: 50%;
   transform: translate(-50%, -50%);
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  justify-content: center;
+  //align-items: center;
+  flex-direction: column;
+
+  @include lg {
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
 
 
   .section {
-    width: 45%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+
+
+    @include lg {
+      width: 45%;
+      justify-content: space-evenly;
+    }
   }
 
   .sectionCard {
@@ -24,12 +37,24 @@
   }
 
   .firstSection {
-    height: 40vh;
+    //height: 12vh;
     justify-content: space-around;
+
+    @include lg {
+      height: 40vh;
+    }
   }
 
   .secondSection {
-    height: 80vh;
+    //height: 30vh;
     justify-content: space-evenly;
+
+    @include md {
+      //height: 30vh;
+    }
+
+    @include lg {
+      //height: 80vh;
+    }
   }
 }

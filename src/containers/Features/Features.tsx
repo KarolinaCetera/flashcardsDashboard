@@ -7,7 +7,7 @@ export const Features: React.FC<{ featuresProps: any }> = ({
 	featuresProps,
 }) => {
 	return (
-		<Card>
+		<Card style={{ margin: "10px 0" }}>
 			<Card.Body className={classes.features}>
 				<Input label={featuresProps} className={classes.featuresInput} />
 				<Button type={featuresProps}>Add Category</Button>

@@ -7,7 +7,7 @@ export const Input: React.FC<{ label: string; className?: any }> = ({
 	className,
 }) => {
 	return (
-		<InputGroup className={className}>
+		<InputGroup className={className} style={{ margin: "5px 0" }}>
 			<InputGroup.Text className={classes.inputGroup} id="basic-addon1">
 				{label}
 			</InputGroup.Text>

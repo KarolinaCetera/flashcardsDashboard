@@ -7,7 +7,7 @@ export const Select: React.FC<{
 	options: Array<string>;
 }> = ({ label, options }) => {
 	return (
-		<div>
+		<>
 			<label className={classes.label}>{label}</label>
 			<Form.Select>
 				{options.map((option) => (
@@ -16,6 +16,6 @@ export const Select: React.FC<{
 					</option>
 				))}
 			</Form.Select>
-		</div>
+		</>
 	);
 };

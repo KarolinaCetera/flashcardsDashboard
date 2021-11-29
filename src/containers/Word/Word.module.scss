@@ -1,9 +1,11 @@
 .word {
   height: 25%;
-  
+  margin: 10px 0;
+
   .wordContainer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin: 5px 0;
   }
 }
