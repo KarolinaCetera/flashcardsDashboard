@@ -8,7 +8,6 @@
   transform: translate(-50%, -50%);
   display: flex;
   justify-content: center;
-  //align-items: center;
   flex-direction: column;
 
   @include lg {
@@ -16,8 +15,7 @@
     justify-content: space-evenly;
     align-items: center;
   }
-
-
+  
   .section {
     display: flex;
     flex-direction: column;
@@ -37,7 +35,6 @@
   }
 
   .firstSection {
-    //height: 12vh;
     justify-content: space-around;
 
     @include lg {
@@ -46,15 +43,10 @@
   }
 
   .secondSection {
-    //height: 30vh;
     justify-content: space-evenly;
 
-    @include md {
-      //height: 30vh;
-    }
-
-    @include lg {
-      //height: 80vh;
+    button {
+      margin: 10px 0;
     }
   }
 }
